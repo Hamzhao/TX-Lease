@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="ie6" lang="zh-cn"><![endif]-->
+<!--[if IE 7]>
+<html class="ie7" lang="zh-cn"><![endif]-->
+<!--[if IE 8]>
+<html class="ie8" lang="zh-cn"><![endif]-->
+<!--[if IE 9]>
+<html class="ie9" lang="zh-cn"><![endif]-->
+<!--[if gt IE 9]>
+<html lang="zh-cn"><![endif]-->
+<!--[if !IE]>-->
+<html lang="zh-cn"><!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title>腾新租赁</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<script src="js/jquery-1.7.1.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="header" class="clearfix">
+			<div class="logo fl">
+				<img src="img/logo.png"/>
+			</div>
+			<div class="header-text">
+				<ul class="clearfix">
+					<li style="border-right: solid 1px #E5E5E5;" class="fl cl3">亲!~<a href="login.html" class="cl3">[请登录]</a><a href="register.html" class="cl3">[免费注册]</a></li>
+					<li class="Shopping_car fl cl3"><a href="shoppingcar.html" class="cl3">
+						<img src="img/sp-car.png"/>
+						<span>购物车(0)</span>
+					</a></li>
+					<li style="border-left: solid 1px #E5E5E5;"  class="fl cl3"><a href="help.html" class="cl3">帮助中心</a></li>
+				</ul>
+				<form action="" method="post">
+					<input type="search" name="search" id="search" class="dsib" placeholder="你的搜索"/>
+					<input type="submit" class="sch-btn dsib psa" value=""/>
+				</form>
+			</div>
+		</div>
+		<div id="nav">
+			<ul>
+				<a href="index.html"><li>首页</li></a>
+				<a href="orders.html"><li>长租下单</li></a>
+				<a href="javascript:void(0)"><li>短租下单</li></a>
+				<a href="vipcenter.html"><li>会员中心</li></a>
+			</ul>
+		</div>
+		<div id="body">
+			<div class="confirmlist">
+				<div class="title">
+					<span>确认订单信息</span>
+					<img src="img/step.png"/>
+				</div>
+				<p>租赁商品</p>
+				<table border="0">
+					<tr>
+						<th class="blank"></th>
+						<th>商品</th>
+						<th></th>
+						<th>起租日期</th>
+						<th>租期(月)</th>
+						<th>押金(元/台)</th>
+						<th>月租金(元/台)</th>
+						<th>数量</th>
+						<th>小计(元)</th>
+					</tr>
+					<tr>
+						<td class="blank"></td>
+						<td>
+							<img src="img/detail2.png"/>
+						</td>
+						<td class="deepcolor">ThinkPad T420 极速版 14.0英寸笔记本电脑（i5/4GB/120GB SSD/集显）</td>
+						<td>2016-06-15</td>
+						<td>12</td>
+						<td class="deepcolor">￥2300</td>
+						<td class="deepcolor">￥200</td>
+						<td class="deepcolor"><span>1</span></td>
+						<td>
+							<label>租金</label>：<strong>￥200</strong>
+							<br />
+							<label>押金</label>：<strong>￥2300</strong>
+						</td>
+					</tr>
+					<tr>
+						<td class="blank"></td>
+						<td>
+							<img src="img/detail3.png"/>
+						</td>
+						<td class="deepcolor">ThinkPad T420 极速版 14.0英寸笔记本电脑（i5/4GB/120GB SSD/集显）</td>
+						<td>2016-06-15</td>
+						<td>12</td>
+						<td class="deepcolor">￥2300</td>
+						<td class="deepcolor">￥200</td>
+						<td class="deepcolor"><span>1</span></td>
+						<td>
+							<label>租金</label>：<strong>￥200</strong>
+							<br />
+							<label>押金</label>：<strong>￥2300</strong>
+						</td>
+					</tr>
+				</table>
+				<p>配送地址</p>
+				<div class="address">
+					<form>
+					<ul>
+						<input type="radio" class="check"/>
+						<li>李烈</li>
+						<li>广东省</li>
+						<li>广州市</li>
+						<li>天河区</li>
+						<li>锦绣联合商务大厦</li>
+						<li>13212214561</li>
+						<li class="operate">
+							<a href="javascript:void(0)"><span id="Update">修改</span></a>
+							<a href="javascript:void(0)"><span>删除</span></a>
+						</li>
+					</ul>
+					<ul>
+						<input type="radio" class="check"/>
+						<li>李烈</li>
+						<li>广东省</li>
+						<li>广州市</li>
+						<li>天河区</li>
+						<li>锦绣联合商务大厦</li>
+						<li>13212214561</li>
+						<li class="operate">
+							<a href="javascript:void(0)"><span>修改</span></a>
+							<a href="javascript:void(0)"><span>删除</span></a>
+						</li>
+					</ul>
+					</form>
+					<script type="text/javascript">
+					$('.address ul .check').click(function(){
+						$('.address ul .check').removeAttr("checked");
+						$('.address ul').removeClass("current");
+						$(this).parent().addClass("current");
+						$(this).attr("checked","checked");
+					})
+					</script>
+					<button class="Add" onclick="return false;">+ 添加新地址</button>
+				</div>
+				<p>支付方式</p>
+				<div class="payment">
+					<input type="radio" name="payment" id="COD" value="cash" checked/>货到付款
+				</div>
+				<p>买家留言</p>
+				<textarea name="message" placeholder="请输入买家备注信息"></textarea>
+				<div class="amount">押金: <strong>9500元</strong>   租金：<strong>467元/月</strong>   总金额：<strong class="totalPay">9967元</strong></div>
+				<a class="return" href="shoppingcar.html"><span>返回购物车修改</span></a>
+				<button class="submit">提交订单</button>
+				<div class="item">
+					<input type="checkbox" name="acceptItem"id="acceptItem"value=""/>
+					<span>同意<a href="javascript:void(0)">《腾新租赁服务条款》</a></span>
+				</div>
+			</div>
+		</div>
+		<div class="add-address" id="add-address">
+			<div class="bg">
+				<form>
+					<p class="cl3">添加新地址<span class="close">×</span></p>
+					<div class="int">
+						<label for="consignee">收货人：</label>
+						<input type="text" name="consignee" id="consignee" />
+					</div>
+					<div class="int">
+						<label for="address">所属地区：</label>
+						<select id="s_province" name="s_province"></select>  
+    					<select id="s_city" name="s_city" ></select>  
+    					<select id="s_county" name="s_county"></select>
+    					<script src="js/area.js" type="text/javascript" charset="utf-8"></script>
+    					<script type="text/javascript">_init_area();</script>
+					</div>
+					<div class="int">
+						<label for="detailed ">详细地址：</label>
+						<input type="text" name="detailed" id="detailed"/>
+					</div>
+					<div class="int">
+						<label for="tel-num">联系电话：</label>
+						<input type="text" name="tel-num" id="tel-num" />
+					</div>
+					<div class="int">
+						<button id="submit" onclick="return false;">确认</button>
+					</div>
+				</form>
+			</div>
+			<script type="text/javascript">
+				$(".add-address .close,#submit").click(function(){
+					$(".add-address").css("display","none");
+				});
+				$("#Add").click(function(){
+					$("#add-address").css("display","block");
+				})
+			</script>
+		</div>
+		<div class="add-address" id="update-address">
+			<div class="bg">
+				<form action="" method="post">
+					<p class="cl3">修改地址<span class="close">×</span></p>
+					<div class="int">
+						<label for="consignee">收货人：</label>
+						<input type="text" name="consignee" id="consignee" />
+					</div>
+					<div class="int">
+						<label for="address">所属地区：</label>
+						<select id="s_province" name="s_province"></select>  
+    					<select id="s_city" name="s_city" ></select>  
+    					<select id="s_county" name="s_county"></select>
+    					<script src="js/area.js" type="text/javascript" charset="utf-8"></script>
+    					<script type="text/javascript">_init_area();</script>
+					</div>
+					<div class="int">
+						<label for="detailed ">详细地址：</label>
+						<input type="text" name="detailed" id="detailed"/>
+					</div>
+					<div class="int">
+						<label for="tel-num">联系电话：</label>
+						<input type="text" name="tel-num" id="tel-num" />
+					</div>
+				</form>
+			</div>
+			<script type="text/javascript">
+				$("#update-address .close").click(function(){
+					$("#update-address").css("display","none");
+				});
+				$("#Update").click(function(){
+					$("#update-address").css("display","block");
+				})
+			</script>
+		</div>
+		<div id="footer">
+			<div class="footLinkBox">
+				<dl>
+					<a href="javascript:void(0)"><dt>新手指南</dt></a>
+					<a href="javascript:void(0)"><dd>新用户注册</dd></a>
+					<a href="javascript:void(0)"><dd>会员登录</dd></a>
+					<a href="javascript:void(0)"><dd>订购流程</dd></a>
+					<a href="javascript:void(0)"><dd>交易须知</dd></a>
+				</dl>
+				
+				<dl>
+					<a href="javascript:void(0)"><dt>付款方式</dt></a>
+					<a href="javascript:void(0)"><dd>支付方式</dd></a>
+					<a href="javascript:void(0)"><dd>常见支付问题</dd></a>
+					<a href="javascript:void(0)"><dd>如何办理退款</dd></a>
+					<a href="javascript:void(0)"><dd>发票制度说明</dd></a>
+				</dl>
+				
+				<dl>
+					<a href="javascript:void(0)"><dt>配送方式</dt></a>
+					<a href="javascript:void(0)"><dd>配送时间及范围</dd></a>
+					<a href="javascript:void(0)"><dd>商品验收与签收</dd></a>
+				</dl>
+				
+				<dl>
+					<a href="javascript:void(0)"><dt>售后服务</dt></a>
+					<a href="javascript:void(0)"><dd>如何办理退还货</dd></a>
+					<a href="javascript:void(0)"><dd>退换货政策</dd></a>
+				</dl>
+				
+				<dl>
+					<a href="javascript:void(0)"><dt>帮助中心</dt></a>
+					<a href="javascript:void(0)"><dd>找回密码</dd></a>
+					<a href="javascript:void(0)"><dd>常见问题</dd></a>
+					<a href="javascript:void(0)"><dd>谨防诈骗</dd></a>
+				</dl>
+			</div>
+			<div class="copyright">
+				<p><a href="javascript:void(0)">返回首页</a> | <a href="javascript:void(0)">联系我们</a> | <a href="javascript:void(0)">隐私条款</a> | <a href="javascript:void(0)">友情链接</a></p>
+				<p>CopyRight &copy; 2007-2016 miracle 粤ICP备09011225号 NewPower Co. 版权所有</p>
+			</div>
+		</div>
+	</body>
+</html>

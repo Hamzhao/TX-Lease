@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="ie6" lang="zh-cn"><![endif]-->
+<!--[if IE 7]>
+<html class="ie7" lang="zh-cn"><![endif]-->
+<!--[if IE 8]>
+<html class="ie8" lang="zh-cn"><![endif]-->
+<!--[if IE 9]>
+<html class="ie9" lang="zh-cn"><![endif]-->
+<!--[if gt IE 9]>
+<html lang="zh-cn"><![endif]-->
+<!--[if !IE]>-->
+<html lang="zh-cn"><!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title>腾新租赁</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<script src="js/jquery-1.7.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/laydate.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="header" class="clearfix">
+			<div class="logo fl">
+				<img src="img/logo.png"/>
+			</div>
+			<div class="header-text">
+				<ul class="clearfix">
+					<li style="border-right: solid 1px #E5E5E5;" class="fl cl3">亲!~<a href="login.html" class="cl3">[请登录]</a><a href="register.html" class="cl3">[免费注册]</a></li>
+					<li class="Shopping_car fl cl3"><a href="shoppingcar.html" class="cl3">
+						<img src="img/sp-car.png"/>
+						<span>购物车(0)</span>
+					</a></li>
+					<li style="border-left: solid 1px #E5E5E5;"  class="fl cl3"><a href="help.html" class="cl3">帮助中心</a></li>
+				</ul>
+				<form action="" method="post">
+					<input type="search" name="search" id="search" class="dsib" placeholder="你的搜索"/>
+					<input type="submit" class="sch-btn dsib psa" value=""/>
+				</form>
+			</div>
+		</div>
+		<div id="nav">
+			<ul>
+				<a href="index.html"><li>首页</li></a>
+				<a href="orders.html"><li class="current">长租下单</li></a>
+				<a href="javascript:void(0)"><li>短租下单</li></a>
+				<a href="vipcenter.html"><li>会员中心</li></a>
+			</ul>
+		</div>
+		<div id="body">
+			<div class="goods-standard psr">
+				<div class="big-box psa"><img src="img/boxing.jpg" class="box-img psa"/></div>
+				<div class="left">
+					<div class="big-img psr">
+						<div class="sm-box psa"></div>
+						<img src="img/boxing.jpg" class="bigimg"/>
+					</div>
+					<div class="sm-img">
+						<img src="img/boxing.jpg"/>
+						<img src="img/detail3.png"/>
+						<img src="img/detail4.png"/>
+					</div>
+					<script src="js/jq-zoomImg.js" type="text/javascript" charset="utf-8"></script>
+				</div>
+				<div class="pItemBox clearfix">
+                	<h1>联想 ThinkPad T410 14.1寸 I5-520M/4G内存/320G硬盘/DVD光驱/集成显卡</h1>
+                	<h3></h3>
+                	<ul>
+	           			<li><label>内存升级：</label>
+	                    	<a href="javascript:void(0)"  class="label  current "> 默认配置</a>
+	                    	<a href="javascript:void(0)"  class="label "> 升级到8G</a>
+	                    	<a href="javascript:void(0)"  class="label "> 升级到16G</a>
+	            			</li>
+			            <li><label>硬盘升级：</label>
+			                <a href="javascript:void(0)"  class="label  current "> 默认配置</a>
+			                <a href="javascript:void(0)"  class="label "> 升级到500G</a>
+			                <a href="javascript:void(0)"  class="label "> 更换128G SSD</a>
+			            </li>
+			            <li><label>保修：</label>
+			                <a href="javascript:void(0)"  class="label  current "> 标准保修</a>
+			                <a href="javascript:void(0)"  class="label "> 意外保</a>
+			            </li>
+			            <li><label>配件：</label>
+			                <a href="javascript:void(0)"  class="label  current "> 有线 鼠标</a>
+			                <a href="javascript:void(0)"  class="label "> 无线鼠标</a>
+			                <a href="javascript:void(0)"  class="label "> 电脑包</a>
+			                <a href="javascript:void(0)"  class="label "> 无线鼠标+包</a>
+			            </li>
+	                    <li><label>新旧属性：</label>
+	                        <a href="javascript:;" class="label current">次新</a>
+	                    </li>
+                		<li class="beginDate"><label>起租日期：</label>
+                			<input id="date" class="laydate-icon" type="text" >
+                		</li>
+                		
+                		<script type="text/javascript">
+                		$(".pItemBox ul li a").click(function(){
+                			$(this).parent().children().removeClass("current");
+                			$(this).addClass("current");
+                		})
+                		laydate({
+						    elem: '#date', //目标元素。由于laydate.js封装了一个轻量级的选择器引擎，因此elem还允许你传入class、tag但必须按照这种方式 '#id .class'
+						    event: 'focus' //响应事件。如果没有传入event，则按照默认的click
+						});
+						
+						$("body").on("click","#end",function(){
+							laydate({
+						    	elem: '#end', 
+						    	event: 'focus' 
+							});
+						})
+						function a(){
+							$(".pItemBox .month").remove();
+							var i = document.createElement("input");
+							i.id = "end";
+							i.className = "laydate-icon";
+							i.setAttribute("type","text");
+							$(".pItemBox .begin").append(i);
+						}
+						a();
+                		</script>
+                    	<li class="month"><label>租期：</label>
+                    		<select name="month" id="month">
+                            	<option value="">12 个月</option>
+                            </select></li>
+                        <li class="pnumber">
+                            <label>数量：</label>
+                            <span class="numberInput">
+                                <input class="min" name="" type="button" value="-" />
+            					<input type="text" class="input_val" name="input_val" value="1" />
+            					<input class="add" name="" type="button" value="+" />
+                            </span>
+                            <script src="js/jquery.spinner.js" type="text/javascript" charset="utf-8"></script>
+                   			<script type="text/javascript">
+									$(function(){
+										//商品加减计算
+										$(".min").click(function(){
+											var t = $(this).siblings(".input_val");
+											if(t.val()<=1){
+												return false;
+											}
+											t.val(parseInt(t.val())-1);
+											setTotal();
+											getCount();
+										});
+										$(".add").click(function(){
+											var t = $(this).siblings(".input_val");
+											t.val(parseInt(t.val())+1);
+											setTotal();
+											getCount();
+										});
+									});
+							</script>
+                            <span>(库存量：99)</span>
+                        </li>
+                        <li class="rprice">
+                        	<label>月租金:</label>
+                        	<strong>￥288.00</strong>
+                        </li>
+                        <li class="btnBuy">
+                        	<button>立即下单</button>
+                        	<button>加入购物车</button>
+                        </li>
+                	</ul>
+                </div>
+			</div>
+			<div class="produce clearfix">
+				<ul>
+					<a href="javascript:void(0)"><li class="current">产品介绍</li></a>
+					<a href="javascript:void(0)"><li>规格参数</li></a>
+					<a href="javascript:void(0)"><li>评论</li></a>
+				</ul>
+				<div class="content">
+					<img src="img/produce.png"/>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div class="footLinkBox">
+				<dl>
+					<a href="javascript:void(0)"><dt>新手指南</dt></a>
+					<a href="javascript:void(0)"><dd>新用户注册</dd></a>
+					<a href="javascript:void(0)"><dd>会员登录</dd></a>
+					<a href="javascript:void(0)"><dd>订购流程</dd></a>
+					<a href="javascript:void(0)"><dd>交易须知</dd></a>
+				</dl>
+				
+				<dl>
+					<a href="javascript:void(0)"><dt>付款方式</dt></a>
+					<a href="javascript:void(0)"><dd>支付方式</dd></a>
+					<a href="javascript:void(0)"><dd>常见支付问题</dd></a>
+					<a href="javascript:void(0)"><dd>如何办理退款</dd></a>
+					<a href="javascript:void(0)"><dd>发票制度说明</dd></a>
+				</dl>
+				
+				<dl>
+					<a href="javascript:void(0)"><dt>配送方式</dt></a>
+					<a href="javascript:void(0)"><dd>配送时间及范围</dd></a>
+					<a href="javascript:void(0)"><dd>商品验收与签收</dd></a>
+				</dl>
+				
+				<dl>
+					<a href="javascript:void(0)"><dt>售后服务</dt></a>
+					<a href="javascript:void(0)"><dd>如何办理退还货</dd></a>
+					<a href="javascript:void(0)"><dd>退换货政策</dd></a>
+				</dl>
+				
+				<dl>
+					<a href="javascript:void(0)"><dt>帮助中心</dt></a>
+					<a href="javascript:void(0)"><dd>找回密码</dd></a>
+					<a href="javascript:void(0)"><dd>常见问题</dd></a>
+					<a href="javascript:void(0)"><dd>谨防诈骗</dd></a>
+				</dl>
+			</div>
+			<div class="copyright">
+				<p><a href="javascript:void(0)">返回首页</a> | <a href="javascript:void(0)">联系我们</a> | <a href="javascript:void(0)">隐私条款</a> | <a href="javascript:void(0)">友情链接</a></p>
+				<p>CopyRight &copy; 2007-2016 miracle 粤ICP备09011225号 NewPower Co. 版权所有</p>
+			</div>
+		</div>
+	</body>
+</html>
